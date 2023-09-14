@@ -1,7 +1,6 @@
 datarobotx
 pandas
 numpy
-StringIO
 plotly
 openai
 datarobot
