@@ -10,7 +10,7 @@ from plotly.subplots import make_subplots
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import datetime as dt
 import openai
-openai.api_key = st.secrets["OPENAI_TOKEN"]
+
 # Set the maximum number of rows and columns to be displayed
 pd.set_option('display.max_rows', None)     # Display all rows
 pd.set_option('display.max_columns', None)  # Display all columns
@@ -18,7 +18,7 @@ import logging
 #Configure the page title, favicon, layout, etc
 st.set_page_config(page_title="Financial Plannning and Analysis",
                    layout="wide")
-
+openai.api_key = st.secrets["OPENAI_TOKEN"]
 API_URL = 'https://cfds-ccm-prod.orm.datarobot.com/predApi/v1.0/deployments/{deployment_id}/predictions?passthroughColumnsSet=all'    # noqa
 API_KEY = st.secrets['DATAROBOT_API_TOKEN']
 
