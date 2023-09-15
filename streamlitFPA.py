@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import sys
-sys.setrecursionlimit(15000)
+sys.setrecursionlimit(10000)
 import datetime as dt
 import openai
 
@@ -183,7 +183,10 @@ def scoreForecast(df):
     predictions_with_explanations['row_id'] = predictions_with_explanations.index
 
     # Melt the DataFrame using datarobotx function
-    pdf_melted = drx.melt_explanations(predictions_with_explanations)
+    try:
+      pdf_melted = drx.melt_explanations(predictions_with_explanations)
+    except Exception as e:
+      print e
 
     # Merge two DataFrames based on the 'row_id' column
     pdf_joined = pd.merge(
