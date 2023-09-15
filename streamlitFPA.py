@@ -169,7 +169,7 @@ def scoreCV(data, deployment_id):
 
     return dfResults
 
-@st.cache_data(show_spinner=False,allow_output_mutation=True)
+@st.cache_data(show_spinner=False)
 def scoreForecast(df):
     #df = pd.read_csv(r"Retail Sales Data 4.csv")
     deployment = drx.Deployment(deployment_id='64ff43e6e3901a43859cd9f9')  # Get deployment
