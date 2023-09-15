@@ -10,7 +10,7 @@ from plotly.subplots import make_subplots
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import datetime as dt
 import openai
-openai.api_key = "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"
+openai.api_key = st.secrets["OPENAI_TOKEN"]
 # Set the maximum number of rows and columns to be displayed
 pd.set_option('display.max_rows', None)     # Display all rows
 pd.set_option('display.max_columns', None)  # Display all columns
