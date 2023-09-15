@@ -186,7 +186,7 @@ def scoreForecast(df):
     try:
       pdf_melted = drx.melt_explanations(predictions_with_explanations)
     except Exception as e:
-      print e
+      print(e)
 
     # Merge two DataFrames based on the 'row_id' column
     pdf_joined = pd.merge(
