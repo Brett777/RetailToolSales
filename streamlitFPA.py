@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import sys
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(15000)
 import datetime as dt
 import openai
 
