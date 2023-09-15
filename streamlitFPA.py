@@ -20,9 +20,9 @@ st.set_page_config(page_title="Financial Plannning and Analysis",
                    layout="wide")
 
 API_URL = 'https://cfds-ccm-prod.orm.datarobot.com/predApi/v1.0/deployments/{deployment_id}/predictions?passthroughColumnsSet=all'    # noqa
-API_KEY = os.environ['DATAROBOT_API_TOKEN']
+API_KEY = st.secrets['DATAROBOT_API_TOKEN']
 
-DATAROBOT_KEY = os.environ['DATAROBOT_KEY']
+DATAROBOT_KEY = st.secrets['DATAROBOT_KEY']
 forecast_point=None
 
 
