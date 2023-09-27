@@ -27,9 +27,7 @@ API_KEY = st.secrets['DATAROBOT_API_TOKEN']
 DATAROBOT_KEY = st.secrets['DATAROBOT_KEY']
 forecast_point=None
 
-
-
-#@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def scoreForecast(df):
     #df = pd.read_csv(r"Retail Sales Data 4.csv")
     deployment = drx.Deployment(deployment_id='64ff43e6e3901a43859cd9f9')  # Get deployment
