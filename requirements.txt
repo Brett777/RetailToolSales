@@ -1,7 +1,8 @@
-datarobotx
+datarobotx==0.1.16
 pandas==1.2.5
-numpy
-plotly
-openai
-datarobot
+numpy==1.25.2
+plotly==5.16.1
+plotly==5.16.1
+datarobot==3.2.0
 scikit-learn
+streamlit==1.25.0
